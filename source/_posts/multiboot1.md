@@ -67,10 +67,3 @@ ESP
                     bootmgfw.efi.mui
                     bootmgr.efi.mui
 ```
-
-## Legacy核心引导
-
-
-### 引导架构
-用于写入MBR
-      //Legacy
