@@ -90,7 +90,7 @@ donate:
     title: 微信支付
   # 支付宝打赏
   alipay: 
-    qrcode: uploads/donate/alipay.jpg 
+    qrcode: uploads/donate/alipayimg.jpg 
     title: 支付宝
 
 # Share
