@@ -86,11 +86,11 @@ donate:
   enable: true
   # 微信打赏
   wechatpay:
-    qrcode: images/donate/wechatpayimg.png
+    qrcode: uploads/donate/wechatpay.jpg
     title: 微信支付
   # 支付宝打赏
   alipay: 
-    qrcode: images/donate/alipayimg.png 
+    qrcode: uploads/donate/alipayimg.jpg 
     title: 支付宝
 
 # Share
@@ -229,7 +229,7 @@ profile:
       date: 2018
     Can-dao:
       link: http://can-dao.com
-      date: 2018
+      date: 2019
   # My Personal Projects
   projects:
     Jvcon/scoop-ques: https://github.com/Jvcon/scoop-ques
