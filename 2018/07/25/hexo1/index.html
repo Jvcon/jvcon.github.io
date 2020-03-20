@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000">
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top">
+  
+  
+  <title>Hexo部署笔记-安装与部署到Github | Hexo</title>
+  <meta name="description" content="本篇记录了搭建、维护本博客的过程与设置。第一篇介绍如何安装Hexo，并把博客部署到Github，借助Github的静态网页托管服务，建立在线博客。 环境：  Ubuntu/Windows/macOS Node Git Github">
+<meta name="keywords" content="折腾">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo部署笔记-安装与部署到Github">
+<meta property="og:url" content="http://blog.ques.fun/2018/07/25/hexo1/index.html">
+<meta property="og:site_name" content="Ques">
+<meta property="og:description" content="本篇记录了搭建、维护本博客的过程与设置。第一篇介绍如何安装Hexo，并把博客部署到Github，借助Github的静态网页托管服务，建立在线博客。 环境：  Ubuntu/Windows/macOS Node Git Github">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-03-20T04:01:33.750Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo部署笔记-安装与部署到Github">
+<meta name="twitter:description" content="本篇记录了搭建、维护本博客的过程与设置。第一篇介绍如何安装Hexo，并把博客部署到Github，借助Github的静态网页托管服务，建立在线博客。 环境：  Ubuntu/Windows/macOS Node Git Github">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://blog.ques.fun/2018/07/25/hexo1/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Ques" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+  
+  
+</head>
+
+
+<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/Jvcon" target="_blank">
+          <img class="img-circle img-rotate" src="/uploads/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">JacquesYip</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Product Manager</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Dongguan, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">Archives</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">Categories</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">Repository</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">Links</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">About</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/Jvcon" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/jvcon" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://www.behance.net/jacques" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/FLOW/">FLOW</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/折腾/">折腾</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/FLOW/" style="font-size: 14px;">FLOW</a> <a href="/tags/折腾/" style="font-size: 13.5px;">折腾</a> <a href="/tags/随笔/" style="font-size: 13px;">随笔</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Archive</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2019/03/05/flow-07/" class="title">FLOW | 我们可能都选错了时间</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-03-05T10:00:00.000Z" itemprop="datePublished">2019-03-05</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2019/02/26/flow-06/" class="title">FLOW | 你了解自己的时间吗？</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-02-26T10:00:00.000Z" itemprop="datePublished">2019-02-26</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2019/02/19/flow-05/" class="title">FLOW | 你不知道的日历五种妙用</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-02-19T13:00:00.000Z" itemprop="datePublished">2019-02-19</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2019/02/12/flow-04/" class="title">FLOW | 你真的准备好上班了吗</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-02-12T10:00:00.000Z" itemprop="datePublished">2019-02-12</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2019/01/29/flow-03/" class="title">FLOW | 如何立FLAG不被打脸(三)——逃离“清单是摆设”的怪圈</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-01-29T10:00:00.000Z" itemprop="datePublished">2019-01-29</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-hexo1" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo部署笔记-安装与部署到Github
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2018/07/25/hexo1/" class="article-date">
+	  <time datetime="2018-07-25T06:08:10.000Z" itemprop="datePublished">2018-07-25</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/折腾/">折腾</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/07/25/hexo1/#comments" class="article-comment-link">Comments</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 875(words)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 3(minutes)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>本篇记录了搭建、维护本博客的过程与设置。第一篇介绍如何安装Hexo，并把博客部署到Github，借助Github的静态网页托管服务，建立在线博客。</p>
+<p>环境：</p>
+<ul>
+<li>Ubuntu/Windows/macOS</li>
+<li>Node</li>
+<li>Git</li>
+<li>Github</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><h3 id="On-macOS-Linux"><a href="#On-macOS-Linux" class="headerlink" title="On macOS/Linux"></a>On macOS/Linux</h3><p>macOS/Linux已经内置了Git，非常方便。只需要生成SHH-key，方便访问Github仓库即可。</p>
+<h3 id="One-Windows"><a href="#One-Windows" class="headerlink" title="One Windows"></a>One Windows</h3><p>这里选择以便携方式安装Git for Windows（手动添加环境变量），并且Git自带的Bash是个不错的工具，能够使用一些基础的bash命令，能够满足轻量需求。</p>
+<h2 id="生成与添加SSH-Key"><a href="#生成与添加SSH-Key" class="headerlink" title="生成与添加SSH Key"></a>生成与添加SSH Key</h2><h3 id="On-macOS-Linux-1"><a href="#On-macOS-Linux-1" class="headerlink" title="On macOS/Linux"></a>On macOS/Linux</h3><p>通过命令行生成SSH Key</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C "邮箱地址"</span><br></pre></td></tr></table></figure>
+
+<h3 id="On-Windows"><a href="#On-Windows" class="headerlink" title="On Windows"></a>On Windows</h3><p>使用Git for Windows里面的bash.exe可以像macOS/Linux一样操作生成ssh-key，不过添加时的操作需要注意：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-agent bash</span><br><span class="line">ssh-add ~/.ssh/id_rsa //用于添加ssh-key文件</span><br></pre></td></tr></table></figure>
+
+<p>默认会在相应路径下生成id_rsa和id_rsa.pub两个文件，其中id_rsa是私钥，id_rsa.pub是公钥，私钥不要公开或者上传，公钥可以上传至github进行验证。</p>
+<p>Windows：<code>c/Users/jvcon/.ssh/id_rsa</code> //在bash里面也同样是<code>~/.ssh/id_rsa.pub</code><br>macOS：<code>~/.ssh/id_rsa.pub</code><br>Linux：<code>~/.ssh/id_rsa.pub</code></p>
+<p>通过cat命令可以轻松查看id_rsa.pub</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa/pub</span><br></pre></td></tr></table></figure>
+
+<p>打开公钥文件即可以复制，进入Github，添加SSH Key，<code>github -&gt; settings -&gt; ssh and gpg keys -&gt; new ssh key</code></p>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><h3 id="On-macOS"><a href="#On-macOS" class="headerlink" title="On macOS"></a>On macOS</h3><p>已经安装好homebrew的基础上，终端中输入命令行安装node。<a href>填坑安装及使用Homebrew</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
+
+<h3 id="On-Windows-1"><a href="#On-Windows-1" class="headerlink" title="On Windows"></a>On Windows</h3><p>同样选择以便携方式安装Node.js，给系统手动添加环境变量。</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>安装node后，使用npm安装hexo以及相应需要的组件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用Hexo"><a href="#使用Hexo" class="headerlink" title="使用Hexo"></a>使用Hexo</h2><h3 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h3><p>新建一个目录用于存放你的hexo博客资料，并且进行初始化。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir hexo //名字可以自定义，作为hexo的主目录</span><br><span class="line">cd hexo //进入到hexo主目录</span><br><span class="line">hexo init //在hexo目录下初始化</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装npm组件"><a href="#安装npm组件" class="headerlink" title="安装npm组件"></a>安装npm组件</h3><p>有一些组件需要安装好，才能保证Hexo正常运行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="新建博文与查看"><a href="#新建博文与查看" class="headerlink" title="新建博文与查看"></a>新建博文与查看</h3><p>由于hexo初始化会建立基础文件，开箱即用。（在忽略主题、配置情况下，可以开始攥写博文）</p>
+<p>通过下方命令可以新建博文，在<code>/source/_data</code>文件夹下可以看到<code>title.md</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new “title” //新建一个标题为title的博文</span><br></pre></td></tr></table></figure>
+
+<p>生成与预览</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  //清理缓存文件</span><br><span class="line">hexo g  //渲染成静态网页文件</span><br><span class="line">hexo s  //打开本地服务器，通过访问http://localhost：4000可以查看效果</span><br></pre></td></tr></table></figure>
+
+<h2 id="部署至Github"><a href="#部署至Github" class="headerlink" title="部署至Github"></a>部署至Github</h2><p>Github本身有友好的静态网页托管服务<code>gh-page</code>，因此利用Github可以方便的搭建在线博客。</p>
+<h3 id="新建Github仓库"><a href="#新建Github仓库" class="headerlink" title="新建Github仓库"></a>新建Github仓库</h3><p>由于我是用于个人博客，因此新建一个仓库名为<code>&lt;用户名&gt;.github.io</code>，Github会自动识别该仓库中的<code>master</code>分支，为网页托管分支。</p>
+<p><strong>注意</strong>：若非个人仓库，而是普通的仓库，需要使用<code>gh-pages</code>分支，才可以进行托管。</p>
+<p>在<code>Clone or Download</code>按钮，可以获得类似下方的ssh链接，稍后会用于部署。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git@github.com:&lt;用户名&gt;/&lt;项目名&gt;.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置Github部署路径"><a href="#配置Github部署路径" class="headerlink" title="配置Github部署路径"></a>配置Github部署路径</h3><p>修改hexo主目录下的<code>_config.yml</code>的<code>deploy</code>：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repository:</span> <span class="string">git@github.com:&lt;用户名&gt;/&lt;项目名&gt;.git</span>  <span class="string">//仓库ssh链接</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span>    <span class="string">//非个人仓库则填写gh-pages</span></span><br></pre></td></tr></table></figure>
+
+<p>当需要部署到Github线上时，执行下面命令即可。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://blog.ques.fun/2018/07/25/hexo1/" title="Hexo部署笔记-安装与部署到Github" target="_blank" rel="external">http://blog.ques.fun/2018/07/25/hexo1/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/Jvcon" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/uploads/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/Jvcon" target="_blank"><span class="text-dark">JacquesYip</span><small class="ml-1x">Product Manager</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2018/07/27/hexo2/" title="Hexo部署笔记-主题部署及备份到Github"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2018/07/25/hello-world/" title="新的开篇"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>$</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>Maybe you could buy me a cup of coffee.</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/uploads/donate/alipay.jpg" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open alipay app scan this qrcode, buy me a coffee!</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/uploads/donate/wechatpay.jpg" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open wechat app scan this qrcode, buy me a coffee!</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> alipay</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> wechat payment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/Jvcon" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/jvcon" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://www.behance.net/jacques" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/js/plugin.min.js"></script>
+<script src="/js/application.js"></script>
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+
+
+
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
