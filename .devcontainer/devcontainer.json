@@ -1,6 +1,6 @@
 {
   "name": "Astro Cloud Developer Space",
-  "image": "://microsoft.com",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
