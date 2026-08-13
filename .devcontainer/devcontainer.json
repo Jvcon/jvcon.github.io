@@ -10,7 +10,8 @@
         "astro-build.astro-vscode",
         "esbenp.prettier-vscode",
         "christian-kohler.path-intellisense",
-        "yzhang.markdown-all-in-one"
+        "yzhang.markdown-all-in-one",
+        "sst-dev.opencode"
       ]
     }
   },
@@ -21,5 +22,5 @@
       "onAutoForward": "openBrowser"
     }
   },
-  "postCreateCommand": "npm install"
+  "postCreateCommand": "npm install && curl -fsSL https://opencode.ai/install | bash"
 }

@@ -4,4 +4,9 @@
 if [ "$AUREUS_INTERNAL_PUSH" = "true" ]; then
   exit 0
 fi
-npx aureus bump && exit 0
+if git log -1 --pretty=%B | grep -q "\[bump\]"; then
+  echo "🚀 检测到 [bump] 标识，正在为您递增博客版本号..."
+  npx aureus bump && exit 0
+else
+  exit 0
+fi
