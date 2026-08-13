@@ -3,12 +3,17 @@ import "@/styles/global.css";
 import "@/styles/typography.css";
 import Head, { type Props as HeadProps } from "@/components/static/Head.astro";
 
-const headProps = Astro.props as HeadProps;
+interface Props extends HeadProps {
+  lang?: "zh" | "en";
+}
+
+const { lang = "en", ...headProps } = Astro.props as Props;
+const locale = lang === "zh" ? "zh_CN" : "en_US";
 ---
 
 <!doctype html>
-<html lang="en">
-    <Head {...headProps} />
+<html lang={lang}>
+  <Head {...headProps} locale={locale} />
 
     <body class="mx-auto">
         {/* Content */}

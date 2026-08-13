@@ -1,12 +1,12 @@
 {
-  "name": "Jacques Yip",
-  "profession": "Product Manager",
-  "summary": "Results-driven professional with 8+ years of experience in designing scalable architectures and leading cross-functional teams. Proven track record of improving system efficiency and driving product-led growth. Adept at bridging the gap between technical execution and business strategy",
+  "name": { "zh": "", "en": "Jacques Yip" },
+  "profession": { "zh": "", "en": "Product Manager" },
+  "summary": { "zh": "", "en": "Results-driven professional with 8+ years of experience in designing scalable architecture and leading cross-functional teams. Proven track record of improving system efficiency and driving product-led growth. Adept at bridging the gap between technical execution and business strategy" },
   "email": "jayto118@gmail.com",
   "location": {
-    "city": "Guanzhou / Dongguan",
-    "state": "Guangdong",
-    "country": "China"
+    "city": { "zh": "广州市/东莞市", "en": "Guanzhou / Dongguan" },
+    "state": { "zh": "广东省", "en": "Guangdong" },
+    "country": {"zh": "中国", "en": "China"}
   },
   "website": "https://blog.ques.fun",
   "socials": [
@@ -18,108 +18,139 @@
   ],
   "experience": [
     {
-      "organization": "TechNova Solutions",
-      "position": "Senior Solutions Architect",
-      "employmentType": "Full-time",
-      "location": "San Francisco, CA",
+      "organization": { "zh": "", "en": "TechNova Solutions" },
+      "position": { "zh": "", "en": "Senior Solutions Architect" },
+      "employmentType": { "zh": "", "en": "Full-time" },
+      "location": { "zh": "", "en": "San Francisco, CA" },
       "startDate": "2020-03-01",
       "endDate": "Present",
-      "responsibility": "Leading the core infrastructure team to build high-availability microservices for enterprise clients.",
-      "highlights": ["Architected a new data pipeline that reduced processing time by 40% using event-driven architecture.", "Mentored a team of 5 junior to mid-level engineers, resulting in a 20% increase in sprint velocity.", "Spearheaded the migration from monolithic architecture to containerized services using Docker and Kubernetes."],
+      "responsibility": { "zh": "", "en": "Leading the core infrastructure team to build high-availability microservices for enterprise clients." },
+      "highlights": [
+        { "zh": "", "en": "Architected a new data pipeline that reduced processing time by 40% using event-driven architecture." },
+        { "zh": "", "en": "Mentored a team of 5 junior to mid-level engineers, resulting in a 20% increase in sprint velocity." },
+        { "zh": "", "en": "Spearheaded the migration from monolithic architecture to containerized services using Docker and Kubernetes." }
+      ],
       "technologies": ["Go", "Node.js", "Kubernetes", "AWS", "PostgreSQL"]
     },
     {
-      "organization": "Innovatech Inc.",
-      "position": "Senior Software Engineer",
-      "employmentType": "Full-time",
-      "location": "San Francisco, CA",
+      "organization": { "zh": "", "en": "Innovatech Inc." },
+      "position": { "zh": "", "en": "Senior Software Engineer" },
+      "employmentType": { "zh": "", "en": "Full-time" },
+      "location": { "zh": "", "en": "San Francisco, CA" },
       "startDate": "2016-06-01",
       "endDate": "2020-02-29",
-      "responsibility": "Designed and implemented scalable backend services for a high-traffic e-commerce platform.",
-      "highlights": ["Developed a recommendation engine that increased user engagement by 25% using machine learning algorithms.", "Optimized database queries, resulting in a 30% reduction in page load times.", "Collaborated with cross-functional teams to deliver new features on time, contributing to a 15% increase in revenue."],
+      "responsibility": { "zh": "", "en": "Designed and implemented scalable backend services for a high-traffic e-commerce platform." },
+      "highlights": [
+        { "zh": "", "en": "Developed a recommendation engine that increased user engagement by 25% using machine learning algorithms." },
+        { "zh": "", "en": "Optimized database queries, resulting in a 30% reduction in page load times." },
+        { "zh": "", "en": "Collaborated with cross-functional teams to deliver new features on time, contributing to a 15% increase in revenue." }
+      ],
       "technologies": ["Python", "Django", "AWS", "Redis", "MySQL"]
     },
     {
-      "organization": "CloudTech Solutions",
-      "position": "Full Stack Engineer",
-      "employmentType": "Full-time",
-      "location": "San Francisco, CA",
+      "organization": { "zh": "", "en": "CloudTech Solutions" },
+      "position": { "zh": "", "en": "Full Stack Engineer" },
+      "employmentType": { "zh": "", "en": "Full-time" },
+      "location": { "zh": "", "en": "San Francisco, CA" },
       "startDate": "2014-01-01",
       "endDate": "2016-05-31",
-      "responsibility": "Developed and maintained web applications for cloud-based services.",
-      "highlights": ["Implemented a real-time analytics dashboard that provided actionable insights to clients, leading to a 10% increase in customer retention.", "Contributed to the development of a multi-tenant SaaS platform, resulting in a 20% growth in the customer base.", "Worked closely with the product team to translate business requirements into technical specifications, ensuring successful project delivery."],
+      "responsibility": { "zh": "", "en": "Developed and maintained web applications for cloud-based services." },
+      "highlights": [
+        { "zh": "", "en": "Implemented a real-time analytics dashboard that provided actionable insights to clients, leading to a 10% increase in customer retention." },
+        { "zh": "", "en": "Contributed to the development of a multi-tenant SaaS platform, resulting in a 20% growth in the customer base." },
+        { "zh": "", "en": "Worked closely with the product team to translate business requirements into technical specifications, ensuring successful project delivery." }
+      ],
       "technologies": ["JavaScript", "React", "Node.js", "AWS", "MongoDB"]
     }
   ],
   "education": [
     {
-      "institution": "State University of Technology",
-      "degree": "Master of Science",
-      "fieldOfStudy": "Computer Science",
+      "institution": { "zh": "", "en": "State University of Technology" },
+      "degree": { "zh": "", "en": "Master of Science" },
+      "fieldOfStudy": { "zh": "", "en": "Computer Science" },
       "startDate": "2012-09-01",
       "endDate": "2014-06-30",
       "grade": "3.8/4.0",
-      "coursework": ["Advanced Algorithms", "Distributed Systems", "Cloud Computing", "Machine Learning"]
+      "coursework": [
+        { "zh": "", "en": "Advanced Algorithms" },
+        { "zh": "", "en": "Distributed Systems" },
+        { "zh": "", "en": "Cloud Computing" },
+        { "zh": "", "en": "Machine Learning" }
+      ]
     },
     {
-      "institution": "Global College",
-      "degree": "Bachelor of Science",
-      "fieldOfStudy": "Information Technology",
+      "institution": { "zh": "", "en": "Global College" },
+      "degree": { "zh": "", "en": "Bachelor of Science" },
+      "fieldOfStudy": { "zh": "", "en": "Information Technology" },
       "startDate": "2008-09-01",
       "endDate": "2012-06-30",
       "grade": "3.6/4.0",
-      "coursework": ["Data Structures", "Database Systems", "Software Engineering", "Operating Systems"]
+      "coursework": [
+        { "zh": "", "en": "Data Structures" },
+        { "zh": "", "en": "Database Systems" },
+        { "zh": "", "en": "Software Engineering" },
+        { "zh": "", "en": "Operating Systems" }
+      ]
     }
   ],
   "skills": [
     {
-      "name": "Programming Languages",
+      "name": { "zh": "", "en": "Programming Languages" },
       "tags": ["Go", "Python", "JavaScript", "Java"]
     },
     {
-      "name": "Cloud Platforms",
+      "name": { "zh": "", "en": "Cloud Platforms" },
       "tags": ["AWS", "Azure", "Google Cloud"]
     },
     {
-      "name": "DevOps Tools",
+      "name": { "zh": "", "en": "DevOps Tools" },
       "tags": ["Docker", "Kubernetes", "Terraform"]
     },
     {
-      "name": "Databases",
+      "name": { "zh": "", "en": "Databases" },
       "tags": ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
     },
     {
-      "name": "Frameworks",
+      "name": { "zh": "", "en": "Frameworks" },
       "tags": ["Django", "React", "Node.js"]
     }
   ],
   "projects": [
     {
-      "name": "DataFlow Analytics",
-      "description": "An open-source telemetry dashboard for monitoring real-time server metrics with low overhead",
+      "name": { "zh": "", "en": "DataFlow Analytics" },
+      "description": { "zh": "", "en": "An open-source telemetry dashboard for monitoring real-time server metrics with low overhead" },
       "url": "https://dataflow.com",
-      "highlights": ["Achieved 1,000+ stars on GitHub within the first 6 months of release.", "Implemented WebSocket connections to handle 10k+ concurrent data streams."],
+      "highlights": [
+        { "zh": "", "en": "Achieved 1,000+ stars on GitHub within the first 6 months of release." },
+        { "zh": "", "en": "Implemented WebSocket connections to handle 10k+ concurrent data streams." }
+      ],
       "technologies": ["Vue.js", "Node.js", "Redis", "WebSockets"]
     },
     {
-      "name": "E-commerce Recommendation Engine",
-      "description": "A machine learning-based recommendation engine that increases user engagement on e-commerce platforms.",
+      "name": { "zh": "", "en": "E-commerce Recommendation Engine" },
+      "description": { "zh": "", "en": "A machine learning-based recommendation engine that increases user engagement on e-commerce platforms." },
       "url": "https://ecomrecommender.com",
-      "highlights": ["Increased user engagement by 25% through personalized product recommendations.", "Utilized collaborative filtering and content-based algorithms to improve recommendation accuracy."],
+      "highlights": [
+        { "zh": "", "en": "Increased user engagement by 25% through personalized product recommendations." },
+        { "zh": "", "en": "Utilized collaborative filtering and content-based algorithms to improve recommendation accuracy." }
+      ],
       "technologies": ["Python", "Scikit-learn", "TensorFlow", "AWS"]
     },
     {
-      "name": "Real-time Chat Application",
-      "description": "A scalable real-time chat application built with WebSockets and microservices architecture.",
+      "name": { "zh": "", "en": "Real-time Chat Application" },
+      "description": { "zh": "", "en": "A scalable real-time chat application built with WebSockets and microservices architecture." },
       "url": "https://realtimechat.com",
-      "highlights": ["Handled 50k+ concurrent users with low latency using a microservices architecture.", "Implemented end-to-end encryption to ensure user privacy and security."],
+      "highlights": [
+        { "zh": "", "en": "Handled 50k+ concurrent users with low latency using a microservices architecture." },
+        { "zh": "", "en": "Implemented end-to-end encryption to ensure user privacy and security." }
+      ],
       "technologies": ["Node.js", "WebSockets", "Docker", "Kubernetes", "AWS"]
     }
   ],
   "certifications": [
     {
-      "name": "AWS Certified Solutions Architect - Associate",
-      "issuer": "Amazon Web Services",
+      "name": { "zh": "", "en": "AWS Certified Solutions Architect - Associate" },
+      "issuer": { "zh": "", "en": "Amazon Web Services" },
       "date": "2021-05-01",
       "url": "https://aws.amazon.com/certification/solutions-architect-associate/",
       "credentialId": "AWS-1234567890"
@@ -127,15 +158,15 @@
   ],
   "courses": [
     {
-      "name": "Advanced Cloud Architecture",
-      "issuer": "Udemy",
+      "name": { "zh": "", "en": "Advanced Cloud Architecture" },
+      "issuer": { "zh": "", "en": "Udemy" },
       "date": "2023-08-01",
       "url": "https://www.udemy.com/course/advanced-cloud-architecture/",
       "credentialId": "UD-9876543210"
     },
     {
-      "name": "Machine Learning A-Z",
-      "issuer": "Coursera",
+      "name": { "zh": "", "en": "Machine Learning A-Z" },
+      "issuer": { "zh": "", "en": "Coursera" },
       "date": "2022-11-01",
       "url": "https://www.coursera.org/learn/machine-learning",
       "credentialId": "CR-1234567890"
@@ -143,30 +174,42 @@
   ],
   "languages": [
     {
-      "language": "English",
-      "fluency": "Native"
+      "language": { "zh": "", "en": "English" },
+      "fluency": { "zh": "", "en": "Native" }
     },
     {
-      "language": "Spanish",
-      "fluency": "Elementary Level Proficiency"
+      "language": { "zh": "", "en": "Spanish" },
+      "fluency": { "zh": "", "en": "Elementary Level Proficiency" }
     }
   ],
   "volunteering": [
     {
-      "organization": "Code for Good",
-      "position": "Mentor",
+      "organization": { "zh": "", "en": "Code for Good" },
+      "position": { "zh": "", "en": "Mentor" },
       "startDate": "2019-01-01",
       "endDate": "Present",
-      "responsibility": "Mentoring high school students from underrepresented backgrounds in basic web development (HTML, CSS, JavaScript)."
+      "responsibility": { "zh": "", "en": "Mentoring high school students from underrepresented backgrounds in basic web development (HTML, CSS, JavaScript)." }
     }
   ],
   "publications": [
     {
-      "title": "The Future of Serverless Architecture",
-      "publisher": "Tech Journal Monthly",
+      "title": { "zh": "", "en": "The Future of Serverless Architecture" },
+      "publisher": { "zh": "", "en": "Tech Journal Monthly" },
       "releaseDate": "2021-08-10",
       "url": "https://techjournal.example.com/serverless",
-      "description": "A comprehensive analysis of cold starts and mitigation strategies in AWS Lambda."
+      "description": { "zh": "", "en": "A comprehensive analysis of cold starts and mitigation strategies in AWS Lambda." }
     }
-  ]
+  ],
+  "labels": {
+    "summary": { "zh": "个人简介", "en": "SUMMARY" },
+    "experience": { "zh": "工作经历", "en": "EXPERIENCE" },
+    "education": { "zh": "教育背景", "en": "EDUCATION" },
+    "skills": { "zh": "技能", "en": "SKILLS" },
+    "projects": { "zh": "项目", "en": "PROJECTS" },
+    "certifications": { "zh": "认证", "en": "CERTIFICATIONS" },
+    "courses": { "zh": "课程", "en": "COURSES" },
+    "languages": { "zh": "语言", "en": "LANGUAGES" },
+    "volunteering": { "zh": "志愿经历", "en": "VOLUNTEERING" },
+    "publications": { "zh": "出版物", "en": "PUBLICATIONS" }
+  }
 }

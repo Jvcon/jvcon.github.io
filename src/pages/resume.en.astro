@@ -4,12 +4,12 @@ import ResumeBody from "@/components/static/ResumeBody.astro";
 import resume from "@/resume-config.json";
 import { localizeData } from "@/lib/translate";
 
-const data = localizeData(resume, "zh");
+const data = localizeData(resume, "en");
 ---
 
-<ResumeLayout title="简历" description={data.summary} image="/og/default.png" lang="zh">
+<ResumeLayout title="Resume" description={data.summary} image="/og/default.png" lang="en">
   <div class="flex justify-end p-4">
-    <a href="/resume.en" class="px-3 py-1 text-xs border rounded hover:bg-zinc-100">English 🇬🇧</a>
+    <a href="/resume" class="px-3 py-1 text-xs border rounded hover:bg-zinc-100">中文版 🇨🇳</a>
   </div>
   <ResumeBody data={data} />
 </ResumeLayout>
