@@ -1,0 +1,34 @@
+{
+  "github": { "owner": "Jvcon", "repo": "jvcon.github.io" },
+  "domain": "https://blog.ques.fun",
+  "bNavigation": true,
+  "homeLabel": "home",
+  "navigationItems": ["blog", "resume", "portfolio"],
+  "bPageFind": true,
+  "bThemeToggle": true,
+  "bRssFeed": true,
+  "bIntroduction": true,
+  "introduction": {
+    "badges": ["Product Manager"],
+    "heading": "Jacques Yip",
+    "subHeadingItems": [
+      {
+        "type": "mail",
+        "label": "jayto118@gmail.com",
+        "url": "mailto:jayto118@gmail.com"
+      }
+    ],
+    "socialItems": [
+      { "type": "linkedin", "url": "https://linkedin.com" },
+      { "type": "github", "url": "https://github.com/Jvcon" }
+    ],
+    "description": "Jacques is a PM.",
+    "ctaItems": [{ "label": "Resume", "url": "/resume", "variant": "default" }]
+  },
+  "featured": {
+    "blog": { "visible": true },
+    "resume": { "visible": true },
+    "portfolio": { "visible": true },
+    "important": "blog"
+  }
+}

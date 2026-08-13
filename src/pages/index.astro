@@ -1,11 +1,29 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Section from "@/components/static/Section.astro";
+import Introduction from "@/components/static/Introduction.astro";
+import site_config from "@/site-config.json";
+import FeaturedBlog from "@/components/static/FeaturedBlog.astro";
+import FeaturedPortfolio from "@/components/static/FeaturedPortfolio.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="Ryze" description="A minimalist Astro starter for personal portfolio and blogs" image="/og/default.png">
+    <div transition:animate="fade" class="pt-10">
+        {/* Introduction Section */}
+        {site_config.bIntroduction && <Introduction />}
+
+        {
+            site_config.featured.important === "portfolio" ? (
+                <>
+                    <FeaturedPortfolio />
+                    <FeaturedBlog />
+                </>
+            ) : (
+                <>
+                    <FeaturedBlog />
+                    <FeaturedPortfolio />
+                </>
+            )
+        }
+    </div>
+</BaseLayout>
