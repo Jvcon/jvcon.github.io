@@ -1,0 +1,25 @@
+{
+  "name": "Astro Cloud Developer Space",
+  "image": "://microsoft.com",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "astro-build.astro-vscode",
+        "esbenp.prettier-vscode",
+        "christian-kohler.path-intellisense",
+        "yzhang.markdown-all-in-one"
+      ]
+    }
+  },
+  "forwardPorts": [4321],
+  "portsAttributes": {
+    "4321": {
+      "label": "Astro Preview Server",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "npm install"
+}
