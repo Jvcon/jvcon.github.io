@@ -1,0 +1,32 @@
+# Dependabot configuration
+# Docs: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+    # Ignore packages whose "fix" in the npm advisory DB is wrong.
+    # The npm advisory database currently lists shadcn@1.0.0 as the fix version
+    # for vulnerabilities in shadcn / @shadcn/registry / fast-glob / micromatch /
+    # braces / ts-morph / astro-eslint-parser / eslint-plugin-astro. Applying that
+    # "fix" breaks the build with `Can't resolve 'shadcn/tailwind.css'` because
+    # shadcn 1.0.0 does not ship the tailwind.css entry the project imports in
+    # src/styles. These alerts are advisory-data false positives until the shadcn
+    # 4.x line or a successor tool ships a real patch.
+    #
+    # Real upstream fixes are still expected for:
+    #   - astro (http-cache-semantics: no fix yet)
+    #   - astro-mermaid (depends on astro)
+    ignore:
+      - dependency-name: "shadcn"
+      - dependency-name: "@shadcn/registry"
+      - dependency-name: "fast-glob"
+      - dependency-name: "micromatch"
+      - dependency-name: "braces"
+      - dependency-name: "@ts-morph/common"
+      - dependency-name: "ts-morph"
+      - dependency-name: "astro-eslint-parser"
+      - dependency-name: "eslint-plugin-astro"
