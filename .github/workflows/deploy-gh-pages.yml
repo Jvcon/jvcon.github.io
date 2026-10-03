@@ -32,6 +32,31 @@ jobs:
           node-version: 22
           cache: npm
 
+      # Pin npm to >= 11.11.1. Node 22 ships npm 10.x, which has the
+      # lockfile cross-arch pruning bug (npm/cli#7961, fixed in 11.3.0)
+      # and the over-strict ci validation bug (#8805, fixed in 11.11.1).
+      # Without this, npm ci can drop the linux-x64 @rolldown binding
+      # the build needs, producing the "Cannot find native binding"
+      # error that previously broke PRs #6/#7/#8.
+      - name: Pin npm
+        run: npm install -g npm@^11.11.1
+        shell: bash
+
+      - name: Assert lockfile has linux-x64 rolldown binding
+        # Fail fast with a clear message instead of a confusing native
+        # binding error 30s into `astro build`. The x64 binding is what
+        # ubuntu-latest needs; the arm64 binding is verified separately
+        # by the dev box before pushing.
+        run: |
+          set -euo pipefail
+          if ! grep -q '"node_modules/@rolldown/binding-linux-x64-gnu"' package-lock.json; then
+            echo "::error::package-lock.json is missing the @rolldown/binding-linux-x64-gnu entry." >&2
+            echo "::error::This is the npm cross-arch lockfile pruning bug (npm/cli#7961)." >&2
+            echo "::error::Regenerate the lockfile on a host with npm >= 11.3:" >&2
+            echo "::error::    rm -rf node_modules package-lock.json && npm install" >&2
+            exit 1
+          fi
+
       - name: Install dependencies
         run: npm ci
 
