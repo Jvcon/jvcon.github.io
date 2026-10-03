@@ -1,15 +1,46 @@
 ---
 import ResumeLayout from "@/layouts/ResumeLayout.astro";
 import ResumeBody from "@/components/static/ResumeBody.astro";
+import { getCollection, render } from "astro:content";
 import resume from "@/resume-config.json";
 import { localizeData } from "@/lib/translate";
 
-const data = localizeData(resume, "zh");
+const lang = "zh";
+
+type ResumeSection =
+  | "resume-experience"
+  | "resume-projects"
+  | "resume-education"
+  | "resume-volunteering"
+  | "resume-certifications";
+
+async function loadSection(name: ResumeSection, lang: "zh" | "en") {
+  const entries = (await getCollection(name))
+    .filter((e) => e.data.lang === lang && !e.data.draft)
+    .sort((a, b) => a.data.order - b.data.order);
+  return Promise.all(
+    entries.map(async (e) => {
+      const { Content, headings } = await render(e);
+      return { data: e.data, Content, headings };
+    }),
+  );
+}
+
+const localized = localizeData(resume, lang);
+const { labels, ...profile } = localized;
+
+const sections = {
+  experience: await loadSection("resume-experience", lang),
+  projects: await loadSection("resume-projects", lang),
+  education: await loadSection("resume-education", lang),
+  volunteering: await loadSection("resume-volunteering", lang),
+  certifications: await loadSection("resume-certifications", lang),
+};
 ---
 
-<ResumeLayout title="简历" description={data.summary} image="/og/default.png" lang="zh">
+<ResumeLayout title="简历" description={profile.summary} image="/og/default.png" lang="zh">
   <div class="flex justify-end p-4">
     <a href="/resume.en" class="px-3 py-1 text-xs border rounded hover:bg-zinc-100">English 🇬🇧</a>
   </div>
-  <ResumeBody data={data} />
+  <ResumeBody data={{ profile, sections, labels }} />
 </ResumeLayout>
