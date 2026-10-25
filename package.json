@@ -41,7 +41,7 @@
     "rehype-figure": "^1.0.1",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
-    "sanitize-html": "^2.17.3",
+    "sanitize-html": "^2.18.1",
     "satori": "^0.33.5",
     "sharp": "^0.35.5",
     "tailwind-merge": "^3.5.0",
