@@ -1,5 +1,6 @@
 import { generateOGImage } from "@/lib/og";
 import portfolio_config from "@/portfolio-config.json";
+import site_config from "@/site-config.json";
 import { parse, format } from "date-fns";
 import type { APIRoute } from "astro";
 
@@ -21,6 +22,7 @@ export const GET: APIRoute = async ({ props }) => {
   const png = await generateOGImage({
     title,
     description,
+    siteName: site_config.site.name,
     category,
     date: formattedDate,
   });

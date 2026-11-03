@@ -1,6 +1,7 @@
 ---
 import FilterPortfolio from "@/components/client/FilterPortfolio";
 import portfolio_config from "@/portfolio-config.json";
+import site_config from "@/site-config.json";
 import { parse } from "date-fns";
 import { getImage } from "astro:assets";
 import type { portfolioConfig } from "@/lib/types";
@@ -42,7 +43,7 @@ const enriched = await Promise.all(
 );
 ---
 
-<IndexLayout title="Portfolio - Ryze" description="A curated selection of projects spanning robotics, analytics, gameplay, software, AI, and hardware" image="/og/default.png">
+<IndexLayout title={`Portfolio - ${site_config.site.name}`} description={site_config.copy.portfolio} image="/og/default.png">
     <div transition:animate="fade">
         <IndexHeader url="/" heading="Portfolio" />
 

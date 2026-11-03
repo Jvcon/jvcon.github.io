@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import { parse } from "date-fns";
 import sanitizeHtml from "sanitize-html";
 import MarkdownIt from "markdown-it";
+import site_config from "@/site-config.json";
 const parser = new MarkdownIt();
 
 export async function GET(context: { site: any }) {
@@ -16,8 +17,8 @@ export async function GET(context: { site: any }) {
 
   return rss({
     trailingSlash: false,
-    title: "Ryze Blog",
-    description: "A reader-friendly blog with accessibility, SEO and responsiveness out of the box",
+    title: `${site_config.site.name} Blog`,
+    description: site_config.copy.blog,
     site: context.site,
     items: items.map((item) => ({
       link: `/blog/${item.id}`,

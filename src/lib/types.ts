@@ -1,4 +1,14 @@
 export interface siteConfig {
+  site: {
+    name: string;
+    title: string;
+    description: string;
+    author: string;
+  };
+  copy: {
+    blog: string;
+    portfolio: string;
+  };
   github: { owner: string; repo: string };
   domain: string;
   bNavigation: boolean;

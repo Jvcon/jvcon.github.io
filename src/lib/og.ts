@@ -8,6 +8,7 @@ const boldFont = fs.readFileSync("src/assets/fonts/Geist-Bold.ttf");
 export interface OGOptions {
   title: string;
   description: string;
+  siteName?: string;
   category?: string;
   date?: string;
 }
@@ -15,6 +16,7 @@ export interface OGOptions {
 export async function generateOGImage({
   title,
   description,
+  siteName = "",
   category,
   date,
 }: OGOptions) {
@@ -52,7 +54,7 @@ export async function generateOGImage({
                   type: "span",
                   props: {
                     style: { fontSize: 20, color: "#a1a1aa", fontWeight: 400 },
-                    children: "Ryze",
+                    children: siteName,
                   },
                 },
               ],
