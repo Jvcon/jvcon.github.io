@@ -1,6 +1,7 @@
 import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
+import site_config from "@/site-config.json";
 
 const resumeBase = {
   lang: z.enum(["zh", "en"]),
@@ -18,7 +19,7 @@ export const collections = {
       description: z.string(),
       category: z.enum(["engineering", "workflow", "strategy", "devlog"]),
       tags: z.array(z.string()).optional().default([]),
-      author: z.string().optional().default("Subhashis Hansda"),
+      author: z.string().optional().default(site_config.site.author),
     }),
   }),
   "resume-experience": defineCollection({

@@ -1,6 +1,13 @@
 {
   "site": {
-    "name": "Jacques Yip"
+    "name": "Jacques Yip",
+    "title": "Jacques Yip",
+    "description": "A Renegade PM Portfolio and Blogs",
+    "author": "Jacques Yip"
+  },
+  "copy": {
+    "blog": "Thoughts on engineering, workflow, strategy, and devlog",
+    "portfolio": "A curated selection of projects spanning robotics, analytics, gameplay, software, AI, and hardware"
   },
   "github": { "owner": "Jvcon", "repo": "jvcon.github.io" },
   "domain": "https://blog.ques.fun",

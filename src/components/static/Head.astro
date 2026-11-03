@@ -16,9 +16,9 @@ export interface Props {
 }
 
 const {
-    title = site_config.site.name,
-    description = "A minimalist Astro starter for personal portfolio and blogs.",
-    author = "Subhashis Hansda",
+    title = site_config.site.title,
+    description = site_config.site.description,
+    author = site_config.site.author,
     canonicalURL = new URL(Astro.url.pathname, Astro.url),
     pubDate,
     image,

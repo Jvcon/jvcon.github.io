@@ -18,7 +18,7 @@ export async function GET(context: { site: any }) {
   return rss({
     trailingSlash: false,
     title: `${site_config.site.name} Blog`,
-    description: "A reader-friendly blog with accessibility, SEO and responsiveness out of the box",
+    description: site_config.copy.blog,
     site: context.site,
     items: items.map((item) => ({
       link: `/blog/${item.id}`,
