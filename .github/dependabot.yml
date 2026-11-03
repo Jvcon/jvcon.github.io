@@ -7,6 +7,15 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    open-pull-requests-limit: 5
+
+    # Batch patch updates so one PR refreshes all safe patch bumps at once.
+    # Minor/major bumps stay as individual PRs because 0.x lines (katex,
+    # satori) and majors (mermaid) need dedicated testing.
+    groups:
+      patch-updates:
+        patterns: ["*"]
+        update-types: ["patch"]
 
     # Ignore packages whose "fix" in the npm advisory DB is wrong.
     # The npm advisory database currently lists shadcn@1.0.0 as the fix version
@@ -30,3 +39,10 @@ updates:
       - dependency-name: "ts-morph"
       - dependency-name: "astro-eslint-parser"
       - dependency-name: "eslint-plugin-astro"
+
+    # Transitive-only packages that should be refreshed by their parents.
+    # `next` is only an optional peer of geist; this project does not use Next.
+    # `vite` pulls rolldown, whose native bindings are intentionally pinned to
+    # 1.2.12 in package.json overrides for the cross-arch lockfile guard.
+      - dependency-name: "next"
+      - dependency-name: "vite"
