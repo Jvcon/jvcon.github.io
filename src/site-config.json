@@ -1,4 +1,7 @@
 {
+  "site": {
+    "name": "Jacques Yip"
+  },
   "github": { "owner": "Jvcon", "repo": "jvcon.github.io" },
   "domain": "https://blog.ques.fun",
   "bNavigation": true,

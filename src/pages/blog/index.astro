@@ -4,6 +4,7 @@ import IndexHeader from "@/components/static/IndexHeader.astro";
 import IndexLayout from "@/layouts/IndexLayout.astro";
 import { getCollection } from "astro:content";
 import { parse } from "date-fns";
+import site_config from "@/site-config.json";
 
 const allItems = (await getCollection("blog"))
     .filter((blog) => !blog.data.draft)
@@ -14,7 +15,7 @@ const allItems = (await getCollection("blog"))
     });
 ---
 
-<IndexLayout title="Blog - Ryze" description="Thoughts on engineering, workflow, strategy, and devlog" image="/og/default.png">
+<IndexLayout title={`Blog - ${site_config.site.name}`} description="Thoughts on engineering, workflow, strategy, and devlog" image="/og/default.png">
     <div transition:animate="fade">
         <IndexHeader url="/" heading="Blog" />
 

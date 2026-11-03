@@ -1,4 +1,5 @@
 export interface siteConfig {
+  site: { name: string };
   github: { owner: string; repo: string };
   domain: string;
   bNavigation: boolean;
