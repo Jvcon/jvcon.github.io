@@ -5,7 +5,7 @@ draft: false
 name: "All-in-One Mobile Management System (Super Assistant) Project"
 role: "Product Owner"
 startDate: "2023-02-01"
-endDate: "Present"
+endDate: "2024-06-21"
 url: ""
 ---
 
@@ -23,4 +23,4 @@ The Super Assistant (ToB) mobile app aims to be an all-in-one store operation to
 - Built the store operation inspection model: combined the brand's goal management with store operation KPI data, scoring store operation status across dimensions including user, marketing, operation, product, control and supply capability, and linked these to underlying business actions and management tools to provide corrective measures and suggestions to store operators.
 - Multi-domain reports with mobile interaction adaptation: established a drill-down interaction standard for data reports on mobile, reducing the difficulty of viewing data on mobile devices.
 
-**Stack**: Mobile App, Mobile BI / Reports, KPI & Metric System, Drill-down Interaction
+**Core Competencies**: Industry Metric System Productization, Store Operation Scoring Model Design, Mobile Data Interaction Standards, BI Drill-down System Design, Digital Decision-making Tool Delivery

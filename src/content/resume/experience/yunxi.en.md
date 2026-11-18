@@ -6,7 +6,7 @@ organization: "Guangzhou Yunxi Technology Co., Ltd."
 position: "Product Manager"
 employmentType: "Full-time"
 startDate: "2021-06-01"
-endDate: "Present"
+endDate: "2024-06-21"
 location: "Guangzhou"
 ---
 
@@ -19,4 +19,4 @@ Owned product planning and iteration management for SaaS product lines including
 - Responsible for the product line planning and iteration of the Insight Cloud data-driven operations platform, leading the design of data collection solutions and the standard metric library.
 - Provided omni-channel digital marketing product solutions for multiple large chain brands, addressing enterprise digital management needs of unified master data, omni-channel transaction fulfillment, and all-domain member operations.
 
-**Stack**: SaaS, Open Platform API, Business Middle Platform, Data Middle Platform, Digital Marketing
+**Core Competencies**: SaaS Product Line Planning, Solution Design & Review, Open Platform API Specification, Metric System Design, Chain-brand Digital Solution Design

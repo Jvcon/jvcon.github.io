@@ -6,7 +6,7 @@ organization: "广州云徙科技有限公司"
 position: "产品经理"
 employmentType: "全职"
 startDate: "2021-06-01"
-endDate: "Present"
+endDate: "2024-06-21"
 location: "广州"
 ---
 
@@ -19,4 +19,4 @@ location: "广州"
 - 负责“洞察云数据驱动运营平台”产品线的规划以及迭代工作，主导数据采集方案梳理、以及标准指标库设计工作；
 - 为多个大型连锁品牌，提供全渠道数字化营销产品解决方案，解决主数据统一、全渠道交易履约、全域会员运营的数字化企业管理诉求。
 
-**技术栈**：SaaS、Open Platform API、Business Middle Platform、Data Middle Platform、Digital Marketing
+**核心能力**：SaaS 产品线规划、解决方案设计与评审、开放平台接口规范制定、数据指标体系设计、连锁品牌数字化方案设计

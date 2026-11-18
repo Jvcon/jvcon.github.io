@@ -17,4 +17,4 @@ Weican Cloud Report turns restaurant business information into a data-driven, vi
 - Drove the R&D team to rebuild the mini-program, improving code reuse and R&D efficiency and strengthening compatibility across different mini-program platforms.
 - After the rebuild, delivered synchronized releases for both WeChat and Alipay mini-programs through agile iteration.
 
-**Stack**: Mini-program, Data Visualization, WeChat, Alipay, Agile
+**Core Competencies**: Metric Definition, Mini-program Requirement Design, Cross-platform Adaptation Planning, R&D Efficiency Improvement, Agile Iteration Management

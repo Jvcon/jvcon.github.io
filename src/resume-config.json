@@ -2,8 +2,8 @@
   "name": { "zh": "叶俊聪", "en": "Jacques Yip" },
   "profession": { "zh": "产品经理", "en": "Product Manager" },
   "summary": {
-    "zh": "拥有超过5年的SaaS软件产品全生命周期管理经验，具备3年服务餐饮行业头部品牌的数字化转型经验，能够为企业提供量身定制的产品解决方案；在业务中台领域拥有丰富的实践经验，涵盖商品、交易、会员、营销等模块的模型设计与重构项目。",
-    "en": "Product Manager with 5+ years of full-lifecycle SaaS software product management experience and 3 years of digital-transformation experience serving leading restaurant brands with tailored product solutions; rich hands-on experience in business middle-platform domains, including model design and reconstruction of product, transaction, membership and marketing modules."
+    "zh": "9 年互联网产品经验，经历餐饮 SaaS、企业业务中台与跨境电商供应链三条业务线，覆盖商品开发、交易、会员营销、数据与质量等业务域；以领域建模驱动复杂业务系统的重构与模块化演进，擅长把分散的业务诉求抽象为可复用的领域模型、规则体系与平台能力，并以可量化的业务收益验证方案；具备 0 到 1 产品落地与大型连锁品牌数字化解决方案的实践经验。近年自主探索 AI 产品与应用场景，实践 Prompt 工程与 AI 辅助开发。",
+    "en": "Product manager with 9 years of experience across restaurant SaaS, enterprise business middle platform and cross-border e-commerce supply chain, covering product development, transaction, membership & marketing, data and quality domains. Drives the refactoring and modular evolution of complex business systems through domain modeling, strong at abstracting fragmented business requirements into reusable domain models, rule systems and platform capabilities, and validating solutions against quantified business outcomes; hands-on experience in zero-to-one product delivery and digital solutions for large chain brands. In recent years, independently exploring AI products and use cases through prompt engineering and AI-assisted development."
   },
   "email": "jayto118@gmail.com",
   "phone": "+86 136-5016-4711",
@@ -23,15 +23,33 @@
   "skills": [
     {
       "name": { "zh": "熟练", "en": "Advanced" },
-      "tags": ["Axure", "Visio", "Project", "Office"]
+      "tags": [
+        { "zh": "领域驱动设计（DDD）与领域建模", "en": "Domain-Driven Design (DDD) & Domain Modeling" },
+        { "zh": "复杂业务系统重构与模块化演进", "en": "Complex System Refactoring & Modular Evolution" },
+        { "zh": "规则与策略抽象、配置化设计", "en": "Rule & Policy Abstraction, Configuration Design" },
+        { "zh": "主数据与领域对象治理", "en": "Master Data & Domain Object Governance" },
+        { "zh": "业务目标到系统方案的转译", "en": "Translating Business Goals into System Solutions" },
+        { "zh": "需求分析与产品规划", "en": "Requirement Analysis & Product Planning" },
+        { "zh": "原型与流程设计", "en": "Prototyping & Flow Design" },
+        "Axure",
+        "Visio",
+        "Project"
+      ]
     },
     {
       "name": { "zh": "掌握", "en": "Medium" },
-      "tags": ["Photoshop", "AutoCAD"]
+      "tags": [
+        { "zh": "开放平台接口与契约设计", "en": "Open Platform API & Contract Design" },
+        { "zh": "数据指标体系设计", "en": "Metric System Design" },
+        { "zh": "AI 应用场景探索", "en": "AI Scenario Exploration" },
+        { "zh": "Prompt 工程与模型评测", "en": "Prompt Engineering & Model Evaluation" },
+        { "zh": "AI 辅助开发", "en": "AI-assisted Development" },
+        "Photoshop"
+      ]
     },
     {
       "name": { "zh": "基础", "en": "Basic" },
-      "tags": ["H5&CSS", "Python"]
+      "tags": ["Python", "H5 & CSS", "AutoCAD"]
     }
   ],
   "labels": {

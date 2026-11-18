@@ -17,4 +17,4 @@ Aligned with the company's market strategy, launched a lightweight restaurant ma
 - Self-service store onboarding core feature: leveraging open-platform third-party integration resources, realized full-chain automatic merchant authorization across takeout platforms, delivery companies and cloud printing within the app.
 - Rebuilt feature and service subscription capability for single-store activation: single stores can be activated by module authorization, and merchants can purchase modules and value-added services per their own needs, effectively lowering the entry barrier for merchants.
 
-**Stack**: Cloud Printing, Open Platform API, SaaS, Order Management
+**Core Competencies**: Lightweight Product Planning, Self-service Onboarding Flow Design, Modular Subscription & Monetization, Open Platform Integration, SMB Requirement Insight

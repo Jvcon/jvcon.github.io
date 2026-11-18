@@ -18,4 +18,4 @@ The Candao business middle platform abstracts business needs and consolidates fu
 - Core domain center planning and design: responsible for planning and solution design of merchant, account, dish and transaction centers across domain business layers, streamlining the business architecture, extracting common business abstractions, reducing duplicated feature construction and effectively lowering marginal product/R&D cost.
 - Unified account system: built a unified account system based on RBAC-ABAC, centrally managing functional and data permissions across business systems.
 
-**Stack**: Business Middle Platform, OneID, RBAC, ABAC, Service Architecture
+**Core Competencies**: Middle Platform Product Planning, Business Capability Abstraction, OneID Mapping Mechanism Design, Unified Permission System Design, Multi-line Iteration Management

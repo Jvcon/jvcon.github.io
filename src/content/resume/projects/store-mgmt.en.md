@@ -20,4 +20,4 @@ The restaurant store management system consists of three applications: Weican As
 - Re-planned the client terminal - WeiPrint - printer printing model; after three iterations the order-issue rate rose 6% to about 98.74%.
 - Led the PWA transformation of the merchant console, retaining easy access and indexability while gaining near-native interaction experience and offline caching, lowering the usage barrier.
 
-**Stack**: Android App, LAN Device Discovery, Print Service, PWA, RFM, Plugin Architecture
+**Core Competencies**: Product Ownership & End-to-end Delivery, Membership System & Marketing Design, Plugin Architecture & Modular Pricing, Hardware Pairing Solution Design, Print Business Model Redesign

@@ -19,4 +19,4 @@ As the Product Manager, fully owned the product planning and lifecycle managemen
 - Communicated with R&D and QA teams across the product line and managed product iterations.
 - Supported the product department in solution evaluation, requirement review, requirement rollout, and post-launch feedback collection and incident response.
 
-**Stack**: SaaS O2O, Business Middle Platform, Data Middle Platform, O2O Solutions
+**Core Competencies**: Product Planning & Lifecycle Management, SaaS Requirement Analysis & Feature Design, Business Abstraction for Middle Platform, R&D Collaboration & Iteration Management, Requirement Review & Launch Operations

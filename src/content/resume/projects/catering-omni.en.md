@@ -19,4 +19,4 @@ Served a strategic-cooperation tea-chain brand client, building an omni-channel 
 - Designed and implemented an object-oriented unified review-and-publish solution that selectively syncs information to target channels as needed, ensuring the accuracy of object information synchronization.
 - Led the refactor of the account permission system with a data-permission rule module that adapts to merchants' business needs, adjusting data permissions per account/account group to meet chain groups' data isolation and security requirements.
 
-**Stack**: Mini-program, Takeout / O2O, Membership, Menu Management, RBAC / Data Permissions
+**Core Competencies**: Zero-to-one Product Delivery, Category Research, Centralized Menu Management, Approval & Publishing Workflow Design, Data Permission Design

@@ -24,4 +24,4 @@ As stores expanded rapidly, management cost and difficulty kept rising. The ente
 - Built the BOM and material cost model: unified management of the bill of materials and cost information for every freshly-made tea product.
 - Connected upstream and downstream systems via standard open-platform APIs, integrating POS, store inventory counting and supply management systems, and captured raw material consumption, production cost and store inventory data for sold products, providing more accurate data support for brand R&D and production planning decisions.
 
-**Stack**: Open Platform API, BOM & Material Cost, Product Model Design, System Integration, Omni-channel
+**Core Competencies**: Product Data Model Design, Multi-channel Listing Solution, BOM & Cost Model Design, Omni-channel Product Onboarding, Upstream/Downstream Integration Design

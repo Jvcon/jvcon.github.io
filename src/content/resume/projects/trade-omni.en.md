@@ -23,4 +23,4 @@ The original marketing middle platform was a member private-domain operation pro
 - Product center upgrade with a differentiated management model: through modules for basic product information, product master data, shelf/menu information, price schemes and in-store selling information, achieved unified multi-channel, multi-business-type product management with differentiated information management by transaction scenario.
 - Filled capability gaps for new local-life business formats: added shelf management, group-buying order management and live-room management modules to keep pace with the rapid rise of retail and live-shopping formats, giving brand merchants handy operation management tools.
 
-**Stack**: Open Platform API, Alipay, UnionPay QuickPass, Douyin Live, Meituan, Ele.me, Feishu, WeCom, DingTalk
+**Core Competencies**: Omni-channel Transaction Platform Planning, Open Platform API Design, Differentiated Product Management Model, Local-life Business Tool Planning, Cross-platform Ecosystem Integration

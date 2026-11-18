@@ -26,4 +26,4 @@ The brand had built a mature western fast-food industry chain in South China wit
 - New paid-member benefit types for a benefit matrix: on top of the original one-time gift pack, added transaction-exclusive pricing, periodic gift packs and co-branded benefits, helping the brand create paid benefits such as the Le Ju Card and Tong Chi Gift Pack.
 - ToB stored-value gift card solution: built on consumer-side gift card basics, delivered enterprise-side employee management, stored-value management and brand-side settlement modules, closing the loop of enterprise self-service top-up and periodic brand settlement; helped the brand open a new growth business in the B2B market.
 
-**Stack**: CRM, Marketing Engine, Vouchers & Coupons, Stored Value, Open Platform API, POS, Mini-program
+**Core Competencies**: Membership Operation Solution Design, Marketing Promotion Model Upgrade, Paid Membership Benefit Matrix, Multi-system Integration Design, B-end Stored-value Gift Card Design
