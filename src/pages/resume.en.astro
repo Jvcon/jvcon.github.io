@@ -1,40 +1,21 @@
 ---
 import ResumeLayout from "@/layouts/ResumeLayout.astro";
 import ResumeBody from "@/components/static/ResumeBody.astro";
-import { getCollection, render } from "astro:content";
 import resume from "@/resume-config.json";
 import { localizeData } from "@/lib/translate";
+import { loadResumeSection } from "@/lib/resume";
 
 const lang = "en";
-
-type ResumeSection =
-  | "resume-experience"
-  | "resume-projects"
-  | "resume-education"
-  | "resume-volunteering"
-  | "resume-certifications";
-
-async function loadSection(name: ResumeSection, lang: "zh" | "en") {
-  const entries = (await getCollection(name))
-    .filter((e) => e.data.lang === lang && !e.data.draft)
-    .sort((a, b) => a.data.order - b.data.order);
-  return Promise.all(
-    entries.map(async (e) => {
-      const { Content, headings } = await render(e);
-      return { data: e.data, Content, headings };
-    }),
-  );
-}
 
 const localized = localizeData(resume, lang);
 const { labels, ...profile } = localized;
 
 const sections = {
-  experience: await loadSection("resume-experience", lang),
-  projects: await loadSection("resume-projects", lang),
-  education: await loadSection("resume-education", lang),
-  volunteering: await loadSection("resume-volunteering", lang),
-  certifications: await loadSection("resume-certifications", lang),
+  experience: await loadResumeSection("resume-experience", lang, "desc"),
+  projects: await loadResumeSection("resume-projects", lang, "desc"),
+  education: await loadResumeSection("resume-education", lang),
+  volunteering: await loadResumeSection("resume-volunteering", lang),
+  certifications: await loadResumeSection("resume-certifications", lang),
 };
 ---
 
