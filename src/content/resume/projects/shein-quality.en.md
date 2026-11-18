@@ -17,7 +17,7 @@ Targeting two goals â€” improving the return rate and lowering inspection cost â
 - Free-inspection eligibility: identified orders eligible for inspection exemption by SKC risk and historical inspection performance, raising the free-inspection rate by 8.12% (101.5% of target) and removing 3.5 million inspection orders.
 - Smart audit: anchored on stratified sampling, injected business constraints by supplier-park-sub-warehouse buckets, and decoupled policy from execution through a risk feature framework, meeting both return-order and supplier coverage targets within audit capacity.
 - SKC risk model propagation: pushed risk scores to frontline operations and merchants so inspection and control capacity shifted toward high-risk SKCs.
-- Supplier self-inspection: built the merchant self-inspection tool and operating flow to move risk control upstream to suppliers, earning the Supplier Self-Inspection Innovation Trailblazer Award.
+- Supplier self-inspection: built the merchant self-inspection tool and operating flow to move risk control upstream to suppliers.
 
 ## Results
 
