@@ -1,6 +1,6 @@
 ---
 lang: "zh"
-order: 8
+order: 3
 draft: false
 name: "全渠道餐饮管理系统"
 role: "产品负责人"

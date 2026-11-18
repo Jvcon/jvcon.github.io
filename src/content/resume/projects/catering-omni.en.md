@@ -1,6 +1,6 @@
 ---
 lang: "en"
-order: 8
+order: 3
 draft: false
 name: "Omni-channel Restaurant Management System"
 role: "Product Owner"

@@ -1,6 +1,6 @@
 ---
 lang: "en"
-order: 10
+order: 2
 draft: false
 name: "Report Assistant Mini-program (Weican Cloud Report)"
 role: "Product Manager"

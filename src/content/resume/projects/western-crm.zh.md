@@ -1,6 +1,6 @@
 ---
 lang: "zh"
-order: 5
+order: 6
 draft: false
 name: "西式快餐连锁品牌会员CRM项目"
 role: "产品经理"

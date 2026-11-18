@@ -1,6 +1,6 @@
 ---
 lang: "zh"
-order: 10
+order: 2
 draft: false
 name: "小程序报表助手（微餐云报表）"
 role: "产品经理"

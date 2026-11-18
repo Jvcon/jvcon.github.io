@@ -1,6 +1,6 @@
 ---
 lang: "en"
-order: 6
+order: 4
 draft: false
 name: "Candao Business Middle Platform"
 role: "Product Owner"

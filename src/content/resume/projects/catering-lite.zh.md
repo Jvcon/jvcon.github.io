@@ -1,6 +1,6 @@
 ---
 lang: "zh"
-order: 7
+order: 5
 draft: false
 name: "餐饮管理系统轻量版"
 role: "产品经理"

@@ -1,6 +1,6 @@
 ---
 lang: "zh"
-order: 9
+order: 1
 draft: false
 name: "餐饮门店管理系统"
 role: "产品负责人"

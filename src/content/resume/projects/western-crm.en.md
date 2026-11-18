@@ -1,6 +1,6 @@
 ---
 lang: "en"
-order: 5
+order: 6
 draft: false
 name: "Member CRM Project for a Western Fast-food Chain Brand"
 role: "Product Manager"

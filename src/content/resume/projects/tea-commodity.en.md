@@ -1,6 +1,6 @@
 ---
 lang: "en"
-order: 1
+order: 9
 draft: false
 name: "Enterprise Commodity Middle Platform Project for a Leading Tea-Chain Brand"
 role: "Product Solution"

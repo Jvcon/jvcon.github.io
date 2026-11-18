@@ -1,6 +1,6 @@
 ---
 lang: "zh"
-order: 3
+order: 8
 draft: false
 name: "茶饮连锁TOP品牌企业数据应用项目"
 role: "产品解决方案"

@@ -1,6 +1,6 @@
 ---
 lang: "en"
-order: 7
+order: 5
 draft: false
 name: "Lightweight Restaurant Management System"
 role: "Product Manager"

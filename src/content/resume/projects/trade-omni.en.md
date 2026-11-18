@@ -1,6 +1,6 @@
 ---
 lang: "en"
-order: 4
+order: 7
 draft: false
 name: "Omni-channel Transaction Management & Business Middle Platform Upgrade Project"
 role: "Product Owner"

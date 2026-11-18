@@ -1,6 +1,6 @@
 ---
 lang: "en"
-order: 3
+order: 8
 draft: false
 name: "Enterprise Data Application Project for a Leading Tea-Chain Brand"
 role: "Product Solution"

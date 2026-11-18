@@ -1,6 +1,6 @@
 ---
 lang: "en"
-order: 2
+order: 10
 draft: false
 name: "All-in-One Mobile Management System (Super Assistant) Project"
 role: "Product Owner"

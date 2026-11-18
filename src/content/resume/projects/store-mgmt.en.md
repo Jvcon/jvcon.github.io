@@ -1,6 +1,6 @@
 ---
 lang: "en"
-order: 9
+order: 1
 draft: false
 name: "Restaurant Store Management System"
 role: "Product Owner"

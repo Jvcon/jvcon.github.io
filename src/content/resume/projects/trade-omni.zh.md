@@ -1,6 +1,6 @@
 ---
 lang: "zh"
-order: 4
+order: 7
 draft: false
 name: "交易管理系统全渠道化与业务中台升级项目"
 role: "产品负责人"
