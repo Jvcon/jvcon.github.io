@@ -2,7 +2,7 @@
 lang: "en"
 order: 12
 draft: false
-name: "Kidswear Open-Shoulder Size Extension"
+name: "Size Extension End-to-End Integration and GMV Uplift"
 role: "Product Owner"
 startDate: "2026-03-01"
 endDate: "2026-11-30"

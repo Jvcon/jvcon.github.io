@@ -2,7 +2,7 @@
 lang: "zh"
 order: 12
 draft: false
-name: "童装拓码项目（供应链协同）"
+name: "拓码全链路一体化及提升 GMV"
 role: "产品负责人"
 startDate: "2026-03-01"
 endDate: "2026-11-30"
