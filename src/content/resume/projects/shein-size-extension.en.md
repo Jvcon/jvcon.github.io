@@ -19,4 +19,6 @@ For high-risk 3-6M kidswear open-shoulder styles, this project moved size extens
 - Attribution and audit trail: defined attribution criteria and operation logs to support exception tracing, responsibility assignment and rule iteration.
 - Cross-system alignment: agreed interfaces and change scope with PCC and supply-side teams, and drove multi-system delivery in sync.
 
+**Award**: Product Outstanding Contribution Award (individual, for size extension end-to-end integration and GMV uplift).
+
 **Core Competencies**: Supply Chain Domain Flow Design, Supply-side Capability Modeling, Stock & Rule Validation Design, Cross-system Interface Contracts, Multi-party Change Coordination

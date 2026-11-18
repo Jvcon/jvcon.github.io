@@ -28,6 +28,6 @@ Own product work for the merchandise development domain of the cross-border e-co
 ## Frontline & Recognition
 
 - Frontline rotation: rotated through menswear FOB and womenswear design-supplier pattern making, following supplier quotation, pattern making and sample operations on site.
-- Awards: PLM Product Outstanding Contribution Award; Outstanding Project Contribution Award (end-to-end bulk production quality management for apparel).
+- Awards: Product Outstanding Contribution Award (individual, for the size extension end-to-end integration and GMV uplift project); Outstanding Team Contribution Award (team, for end-to-end bulk production quality management for apparel).
 
 **Core Competencies**: Domain-Driven Design (DDD) & Domain Modeling, Complex Business System Refactoring & Modular Evolution, Rule/Strategy Abstraction & Configuration Design, Master Data & Domain Object Governance, Translating Business Goals into System Solutions, Cross-system Interface Contracts & Delivery Alignment

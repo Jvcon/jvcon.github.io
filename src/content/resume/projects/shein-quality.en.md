@@ -21,6 +21,6 @@ Targeting two goals — improving the return rate and lowering inspection cost �
 
 ## Results
 
-RMB 29.37 million in inspection labor saved; quality return rate improved 5.0% under the same policy (100% of target); RMB 140 million of GMV protected. The project received the Outstanding Project Contribution Award.
+RMB 29.37 million in inspection labor saved; quality return rate improved 5.0% under the same policy (100% of target); RMB 140 million of GMV protected. The project received the Outstanding Team Contribution Award.
 
 **Core Competencies**: Quality Domain Framework Design (PDCA → Strategy → Rules → Metrics), Rule & Policy Abstraction, Risk Tiering & Sampling Modeling, Multi-objective Trade-offs (Cost / Returns / Coverage), Interpretable Delivery of Business Constraints
