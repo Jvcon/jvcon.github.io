@@ -1,0 +1,88 @@
+---
+import { getCollection } from "astro:content";
+import GearCard from "@/components/static/GearCard.astro";
+import IndexHeader from "@/components/static/IndexHeader.astro";
+import IndexLayout from "@/layouts/IndexLayout.astro";
+import { GEAR_CATEGORY_LABELS, GEAR_CATEGORY_ORDER, formatUpdated } from "@/lib/gear";
+import type { gearConfig } from "@/lib/types";
+import site_config from "@/site-config.json";
+
+const items = (await getCollection("gear"))
+    .filter((item) => !item.data.draft)
+    .sort((a, b) => b.data.acquired.localeCompare(a.data.acquired)) as gearConfig[];
+
+const currentItems = items.filter((item) => item.data.status === "current");
+const retiredItems = items.filter((item) => item.data.status !== "current");
+
+const groups = GEAR_CATEGORY_ORDER.map((category) => ({
+    category,
+    label: GEAR_CATEGORY_LABELS[category],
+    items: currentItems.filter((item) => item.data.category === category),
+})).filter((group) => group.items.length > 0);
+
+const latestUpdated = items
+    .map((item) => item.data.updated)
+    .filter((value): value is string => Boolean(value))
+    .sort()
+    .at(-1);
+---
+
+<IndexLayout title={`装备 - ${site_config.site.name}`} description={site_config.copy.gear} image="/og/default.png">
+    <div transition:animate="fade">
+        <IndexHeader url="/" heading="装备" />
+
+        <div class="border border-border border-t-0 p-6">
+            <p class="text-base leading-relaxed text-secondary-foreground/80">
+                我买装备的原则很简单:能修、能换、符合通用标准,比参数漂亮更重要。
+                这里的每一件都至少用了一个月,写清楚当时为什么买、哪里不满意,以及会不会再买一次。
+            </p>
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-2 mt-4 text-sm text-muted-foreground">
+                <span>在役 {currentItems.length}</span>
+                <span class="text-muted-foreground/40">/</span>
+                <span>退役 {retiredItems.length}</span>
+                {latestUpdated && (
+                    <>
+                        <span class="text-muted-foreground/40">/</span>
+                        <span>最近复核 {formatUpdated(latestUpdated)}</span>
+                    </>
+                )}
+            </div>
+        </div>
+
+        {items.length === 0 ? (
+            <div class="border border-border border-t-0 p-6">
+                <p class="text-muted-foreground">还没有装备记录。</p>
+            </div>
+        ) : (
+            <div class="space-y-8 mt-8">
+                {groups.map((group) => (
+                    <section>
+                        <div class="flex items-baseline justify-between border-b border-border pb-2">
+                            <h2 class="text-2xl font-semibold opacity-90">{group.label}</h2>
+                            <span class="text-xs text-muted-foreground">{group.items.length}</span>
+                        </div>
+                        <div class="grid sm:grid-cols-2 gap-3 mt-3">
+                            {group.items.map((item) => (
+                                <GearCard item={item} />
+                            ))}
+                        </div>
+                    </section>
+                ))}
+
+                {retiredItems.length > 0 && (
+                    <section>
+                        <div class="flex items-baseline justify-between border-b border-border pb-2">
+                            <h2 class="text-2xl font-semibold opacity-90">退役与替换</h2>
+                            <span class="text-xs text-muted-foreground">{retiredItems.length}</span>
+                        </div>
+                        <div class="grid sm:grid-cols-2 gap-3 mt-3">
+                            {retiredItems.map((item) => (
+                                <GearCard item={item} />
+                            ))}
+                        </div>
+                    </section>
+                )}
+            </div>
+        )}
+    </div>
+</IndexLayout>

@@ -7,15 +7,15 @@ import Head, { type Props as HeadProps } from "@/components/static/Head.astro";
 import FooterId from "@/components/static/FooterId.astro";
 
 const { type, prev, next, ...headProps } = Astro.props as HeadProps & {
-    type: "blog" | "portfolio";
+    type: "blog" | "portfolio" | "gear";
     prev: any;
     next: any;
 };
 ---
 
 <!doctype html>
-<html lang="en">
-    <Head {...headProps} type={type === "blog" ? "article" : "website"} />
+<html lang="zh-CN">
+    <Head {...headProps} locale="zh_CN" type={type === "portfolio" ? "website" : "article"} />
     <body class="mx-auto">
         <Header />
         {/* Content */}

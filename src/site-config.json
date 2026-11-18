@@ -7,13 +7,14 @@
   },
   "copy": {
     "blog": "Thoughts on engineering, workflow, strategy, and devlog",
-    "portfolio": "A curated selection of projects spanning robotics, analytics, gameplay, software, AI, and hardware"
+    "portfolio": "A curated selection of projects spanning robotics, analytics, gameplay, software, AI, and hardware",
+    "gear": "我长期使用过、愿意复购或已经淘汰的装备,以及每次选择背后的取舍"
   },
   "github": { "owner": "Jvcon", "repo": "jvcon.github.io" },
   "domain": "https://blog.ques.fun",
   "bNavigation": true,
   "homeLabel": "home",
-  "navigationItems": ["blog", "resume", "portfolio"],
+  "navigationItems": ["blog", "resume", "portfolio", "gear"],
   "bPageFind": true,
   "bThemeToggle": true,
   "bRssFeed": true,

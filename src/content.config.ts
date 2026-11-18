@@ -2,7 +2,7 @@ import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 import site_config from "@/site-config.json";
-import { BLOG_CATEGORIES } from "@/lib/categories";
+import { BLOG_CATEGORIES, GEAR_CATEGORIES } from "@/lib/categories";
 
 const resumeBase = {
   lang: z.enum(["zh", "en"]),
@@ -21,6 +21,28 @@ export const collections = {
       category: z.enum(BLOG_CATEGORIES),
       tags: z.array(z.string()).optional().default([]),
       author: z.string().optional().default(site_config.site.author),
+    }),
+  }),
+  gear: defineCollection({
+    loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/gear" }),
+    schema: z.object({
+      draft: z.boolean().default(false),
+      title: z.string(),
+      description: z.string(),
+      category: z.enum(GEAR_CATEGORIES),
+      status: z.enum(["current", "retired", "replaced"]),
+      acquired: z.string(),
+      date: z.string(),
+      updated: z.string().optional(),
+      price: z.number().optional(),
+      currency: z.string().optional().default("CNY"),
+      acquiredVia: z.enum(["bought", "gift", "work", "secondhand"]).optional(),
+      verdict: z.enum(["buy-again", "maybe", "no"]),
+      brand: z.string().optional().default(""),
+      tags: z.array(z.string()).optional().default([]),
+      cover: z.string().optional().default(""),
+      links: z.array(z.object({ label: z.string(), url: z.string() })).optional().default([]),
+      replacedBy: z.string().optional().default(""),
     }),
   }),
   "resume-experience": defineCollection({

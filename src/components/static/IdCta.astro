@@ -1,6 +1,7 @@
 ---
 import { buttonVariants } from "../ui/button";
 import { SocialIcon } from "@/lib/icons";
+import { RiArrowLeftUpLine } from "@remixicon/react";
 
 const { type } = Astro.props;
 ---
@@ -12,6 +13,14 @@ const { type } = Astro.props;
             <a href="https://medium.com" target="_blank" rel="noopener noreferrer" class={`flex items-center justify-center gap-2 ${buttonVariants({ variant: "default" })}`}>
                 <SocialIcon type="medium" className="size-6" />
                 <span>Subscribe to Medium</span>
+            </a>
+        </div>
+    ) : type === "gear" ? (
+        <div class="flex flex-col items-center justify-center gap-3 border border-border p-6 w-fit mx-auto mb-6">
+            <p class="text-secondary-foreground/80">还有别的装备</p>
+            <a href="/gear" class={`flex items-center justify-center gap-2 ${buttonVariants({ variant: "default" })}`}>
+                <RiArrowLeftUpLine className="size-5" />
+                <span>回到装备列表</span>
             </a>
         </div>
     ) : (

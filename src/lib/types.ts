@@ -1,4 +1,4 @@
-import type { blogCategoryType, portfolioCategoryType } from "./categories";
+import type { blogCategoryType, gearCategoryType, portfolioCategoryType } from "./categories";
 
 export interface siteConfig {
   site: {
@@ -10,6 +10,7 @@ export interface siteConfig {
   copy: {
     blog: string;
     portfolio: string;
+    gear: string;
   };
   github: { owner: string; repo: string };
   domain: string;
@@ -67,11 +68,33 @@ export interface blogConfig {
   };
 }
 
-export type navigationType = "portfolio" | "blog";
+export interface gearConfig {
+  id: string;
+  data: {
+    date: string;
+    title: string;
+    description: string;
+    category: gearCategoryType;
+    status: "current" | "retired" | "replaced";
+    acquired: string;
+    updated?: string;
+    price?: number;
+    currency: string;
+    acquiredVia?: "bought" | "gift" | "work" | "secondhand";
+    verdict: "buy-again" | "maybe" | "no";
+    brand: string;
+    tags: string[];
+    cover: string;
+    links: { label: string; url: string }[];
+    replacedBy: string;
+  };
+}
+
+export type navigationType = "portfolio" | "blog" | "gear";
 
 export type subHeadingIconType = "mail" | "address" | "phone" | "web";
 export type socialIconType = "linkedin" | "instagram" | "youtube" | "facebook" | "bluesky" | "reddit" | "threads" | "mastodon" | "tumblr" | "twitter" | "x" | "discord" | "steam" | "twitch" | "medium" | "github" | "gitlab";
 
 type variantType = "default" | "secondary" | "outline" | "ghost" | "destructive" | "link" | null | undefined;
 
-export type { blogCategoryType, portfolioCategoryType } from "./categories";
+export type { blogCategoryType, gearCategoryType, portfolioCategoryType } from "./categories";

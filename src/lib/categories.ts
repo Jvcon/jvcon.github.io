@@ -15,3 +15,6 @@ export type blogCategoryType = (typeof BLOG_CATEGORIES)[number];
 
 export const PORTFOLIO_CATEGORIES = ["robotics", "analytics", "gameplay", "software", "ai", "hardware"] as const;
 export type portfolioCategoryType = (typeof PORTFOLIO_CATEGORIES)[number];
+
+export const GEAR_CATEGORIES = ["compute", "mobile", "wearable", "reading", "travel", "home", "network"] as const;
+export type gearCategoryType = (typeof GEAR_CATEGORIES)[number];

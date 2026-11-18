@@ -1,0 +1,46 @@
+---
+import { getCollection, render } from "astro:content";
+import { parse } from "date-fns";
+import GearHeader from "@/components/static/GearHeader.astro";
+import IdLayout from "@/layouts/IdLayout.astro";
+
+export async function getStaticPaths() {
+    const items = (await getCollection("gear")).filter((item) => !item.data.draft);
+    return items.map((item) => ({
+        params: { id: item.id },
+        props: { item },
+    }));
+}
+
+const { item } = Astro.props;
+const { Content } = await render(item);
+
+const allItems = (await getCollection("gear"))
+    .filter((entry) => !entry.data.draft)
+    .sort((a, b) => b.data.acquired.localeCompare(a.data.acquired));
+
+const currentIndex = allItems.findIndex((entry) => entry.id === item.id);
+const prev = currentIndex > 0 ? allItems[currentIndex - 1] : null;
+const next = currentIndex < allItems.length - 1 ? allItems[currentIndex + 1] : null;
+
+const pubDate = parse(item.data.date, "dd-MM-yyyy", new Date());
+---
+
+<IdLayout
+    type="gear"
+    title={item.data.title}
+    description={item.data.description}
+    image={`/og/gear/${item.id}.png`}
+    pubDate={pubDate}
+    tags={item.data.tags}
+    prev={prev}
+    next={next}
+>
+    <article transition:animate="fade">
+        <GearHeader items={item.data} />
+
+        <div class="mt-10 prose border border-border p-6">
+            <Content />
+        </div>
+    </article>
+</IdLayout>

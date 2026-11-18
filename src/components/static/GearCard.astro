@@ -1,0 +1,34 @@
+---
+import {
+    GEAR_STATUS_LABELS,
+    GEAR_VERDICT_LABELS,
+    formatAcquired,
+} from "@/lib/gear";
+import type { gearConfig } from "@/lib/types";
+
+const { item } = Astro.props as { item: gearConfig };
+const acquiredLabel = formatAcquired(item.data.acquired);
+const statusLabel = GEAR_STATUS_LABELS[item.data.status];
+const verdictLabel = GEAR_VERDICT_LABELS[item.data.verdict];
+---
+
+<a
+    href={`/gear/${item.id}`}
+    class="group flex flex-col border border-border bg-muted p-4 hover:bg-card hover:border-foreground/20 animation select-none"
+>
+    <div class="flex items-center justify-between gap-3 text-xs text-muted-foreground">
+        <span class="uppercase tracking-widest">{acquiredLabel}</span>
+        <span class="px-2 py-0.5 border border-border bg-background rounded">{statusLabel}</span>
+    </div>
+
+    <h3 class="mt-3 text-xl font-medium leading-snug text-foreground/85 group-hover:text-foreground animation">
+        {item.data.title}
+    </h3>
+    <p class="mt-2 text-sm leading-relaxed text-muted-foreground line-clamp-2">
+        {item.data.description}
+    </p>
+
+    <div class="mt-auto pt-3 text-xs text-muted-foreground/80">
+        {verdictLabel}
+    </div>
+</a>
