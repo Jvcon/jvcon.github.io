@@ -9,6 +9,7 @@
 | 文件 | 内容 | 何时使用 |
 |---|---|---|
 | [`positioning.md`](./positioning.md) | 定位声明 + 拒绝清单 | 写每篇文章前的"是否符合定位"自检 |
+| [`categories.md`](./categories.md) | 分类体系:支柱 → category 映射 | 写文章取 category 时查 |
 | [`worksheet.md`](./worksheet.md) | 一页纸定位工作表 | 月度复盘 / 季度回顾 |
 | [`mvp-90-days.md`](./mvp-90-days.md) | 内容矩阵 + 90 天排期 | 选题、节奏、复盘节点 |
 

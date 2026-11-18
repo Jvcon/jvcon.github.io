@@ -8,6 +8,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 import type { blogCategoryType, portfolioCategoryType } from "@/lib/types";
+import { BLOG_CATEGORIES, PORTFOLIO_CATEGORIES } from "@/lib/categories";
 
 type FilterType = "blog" | "portfolio";
 
@@ -43,9 +44,6 @@ interface FilterResult<T extends FilterType> {
   filterOpen: boolean;
   setFilterOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
-
-const BLOG_CATEGORIES: blogCategoryType[] = ["engineering", "workflow", "strategy", "devlog"];
-const PORTFOLIO_CATEGORIES: portfolioCategoryType[] = ["robotics", "analytics", "gameplay", "software", "ai"];
 
 function getItemTags<T extends FilterType>(item: FilterItem<T>): string[] {
   return item.data.tags || [];
@@ -171,7 +169,7 @@ export function FilterControls<T extends FilterType>({ filter }: FilterControlsP
             <p className="text-xs font-medium text-muted-foreground">Category</p>
             <div className="flex flex-wrap gap-1.5">
               {allCategories.map((cat) => (
-                <button key={cat} type="button" onClick={() => handleCategoryChange(cat as CategoryFilterType)} className={cn("cursor-pointer text-xs px-2 py-0.5 rounded border border-border", category === cat ? "bg-secondary-foreground text-secondary" : "bg-transparent text-muted-foreground hover:bg-muted")}>
+                <button key={cat} type="button" onClick={() => handleCategoryChange(cat as CategoryFilterType)} className={cn("cursor-pointer text-xs uppercase px-2 py-0.5 rounded border border-border", category === cat ? "bg-secondary-foreground text-secondary" : "bg-transparent text-muted-foreground hover:bg-muted")}>
                   {cat}
                 </button>
               ))}

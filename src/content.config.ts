@@ -2,6 +2,7 @@ import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 import site_config from "@/site-config.json";
+import { BLOG_CATEGORIES } from "@/lib/categories";
 
 const resumeBase = {
   lang: z.enum(["zh", "en"]),
@@ -17,7 +18,7 @@ export const collections = {
       date: z.string(),
       title: z.string(),
       description: z.string(),
-      category: z.enum(["engineering", "workflow", "strategy", "devlog"]),
+      category: z.enum(BLOG_CATEGORIES),
       tags: z.array(z.string()).optional().default([]),
       author: z.string().optional().default(site_config.site.author),
     }),
