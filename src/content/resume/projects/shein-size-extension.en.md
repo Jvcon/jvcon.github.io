@@ -9,16 +9,23 @@ endDate: "2026-11-30"
 url: ""
 ---
 
-For high-risk 3-6M kidswear open-shoulder styles, this project moved size extension work that relied on offline coordination and manual judgment into the system: the flow and rule checks were formalized, material stock and pricing connected, and suppliers enabled to choose size-extension SKUs themselves, coordinating multi-system changes with PCC and supply-side teams.
+Size extension is a common need across self-operated apparel categories, but the rules differed by category, the flow ran on spreadsheets, 13–15 systems including PLM, PRM, DMS and SDMS had information gaps, kidswear on the FOB channel could not even initiate extension in the system, and roughly 27% of extension requests were rejected. The project rebuilt size extension into one integrated mechanism of end-to-end online workflows across 15+ systems, algorithm-driven SKC selection and subsidy backstop.
 
 ## Responsibilities
 
-- Open-shoulder size extension flow: mapped the size extension flow for high-risk 3-6M kidswear, defined trigger conditions, execution steps and operating rules, and delivered them in the system.
-- Size-extension SKU material stock: designed stock validation and reservation rules for size-extension SKUs, blocking material-shortage risk before selection and ordering.
-- Supplier self-selection: enabled suppliers to select and operate size-extension SKUs, paired with size-based pricing rules so extension cost and selection decisions move to the supply side.
-- Attribution and audit trail: defined attribution criteria and operation logs to support exception tracing, responsibility assignment and rule iteration.
-- Cross-system alignment: agreed interfaces and change scope with PCC and supply-side teams, and drove multi-system delivery in sync.
+- End-to-end system rebuild: connected 15+ systems including IPSP, PLM, PRM, DMS, SDMS and PTMC, bringing the core flow, sales restoration, costing subsidy and size-based pricing online in two phases.
+- Kidswear blind spot: connected PRM to PLM and delivered skip-size data refresh, the 3-6M open-shoulder logic, and size inheritance for recolored, pattern-shared and greige garments, enabling kidswear FOB to initiate extension in the system for the first time.
+- Algorithm-driven selection: built automatic SKC scoping and push based on head-7/near-7/near-30 sales, quality grade and channel, paired with seasonal selection strategy, replacing manual submissions.
+- Subsidy decoupled from costing: designed a standalone subsidy order entity that decoupled subsidy rules from the existing costing flow and reused 70% of the chain, addressing the top rejection reason — suppliers refusing extension because added material carried no price increase (30% of rejections).
+- Rollout at scale: ran four SOP training sessions and live briefings, cleaned rejection-reason attribution, and migrated categories and suppliers onto the online flow.
+
+## Results (as of Oct 2026)
+
+- GMV and profit: USD 340 million in cumulative GMV from extended SKUs and USD 17.9 million in net profit; a stable 2.7% of self-operated GMV after full launch (100% of target).
+- Subsidy leverage: RMB 148 thousand of subsidy drove USD 1.587 million in subsidized SKU sales, with subsidy at 1.4% of transacted GMV.
+- Cycle time and scale: end-to-end cycle cut from 21 days offline to 14.4 days (over 30% faster), with 98 thousand SKCs and 140 thousand SKUs extended.
+- Portfolio health: 30-day first-order sell-through at 85.7% (71% marketplace average), inbound stockout rate within 15 days at 2.7% (better than the 3.74% target) and slow-moving inventory at 1.79%.
 
 **Award**: Product Outstanding Contribution Award (individual, for size extension end-to-end integration and GMV uplift).
 
-**Core Competencies**: Supply Chain Domain Flow Design, Supply-side Capability Modeling, Stock & Rule Validation Design, Cross-system Interface Contracts, Multi-party Change Coordination
+**Core Competencies**: End-to-end Multi-system Rebuild, Rule & Costing Mechanism Decoupling, Algorithm-driven Selection & Strategy Design, Cross-channel Alignment (FOB / OBM), Legacy Process Digitization & Scaled Rollout
