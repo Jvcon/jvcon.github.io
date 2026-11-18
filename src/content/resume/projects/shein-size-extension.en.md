@@ -3,13 +3,13 @@ lang: "en"
 order: 12
 draft: false
 name: "Size Extension End-to-End Integration and GMV Uplift"
-role: "Product Owner"
+role: "Product Owner — Product Development"
 startDate: "2026-03-01"
 endDate: "2026-11-30"
 url: ""
 ---
 
-Size extension is a common need across self-operated apparel categories, but the rules differed by category, the flow ran on spreadsheets, 13–15 systems including PLM, PRM, DMS and SDMS had information gaps, kidswear on the FOB channel could not even initiate extension in the system, and roughly 27% of extension requests were rejected. The project rebuilt size extension into one integrated mechanism of end-to-end online workflows across 15+ systems, algorithm-driven SKC selection and subsidy backstop.
+Size extension is a common need across self-operated apparel categories, but the rules differed by category, the flow ran on spreadsheets, 13–15 systems including PLM, PRM, DMS and SDMS had information gaps, kidswear on the FOB channel could not even initiate extension in the system, and roughly 27% of extension requests were rejected. Delivered jointly by the product development and supply lines, the project rebuilt size extension into one integrated mechanism: end-to-end online workflows across 15+ systems, algorithm-driven SKC selection and a subsidy backstop. As product owner on the product development side, I owned the rules, SKC selection and system changes on that side and aligned subsidy, costing and fulfilment flows with supply.
 
 ## Responsibilities
 

@@ -10,7 +10,7 @@ endDate: "Present"
 location: "Guangzhou"
 ---
 
-Own product work for the merchandise development domain of the cross-border e-commerce supply chain, covering the development flow, product master data, quality management and warehouse inspection. Owned two product lines in sequence: PLM product development, then QMC quality management, returning to PLM in March 2026 as the owner of the product development flow (P2J) modularization.
+Own product work for the merchandise development domain of the cross-border e-commerce supply chain, covering the development flow, product master data, quality management and warehouse inspection. Owned two product lines in sequence: PLM product development, then QMC quality management, returning to PLM in March 2026 as the owner of the product development flow (P2J) modularization. Led the size extension end-to-end integration project, a collaboration between product development and supply, which generated USD 340 million in extended-SKU GMV.
 
 ## PLM Product Development · Jun 2024–Mar 2025 / Mar 2026–Present
 
